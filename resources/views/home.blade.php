@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Sticky Footer Template for Bootstrap</title>
+    <title>AMZ 2D barcode generator</title>
 
     <!-- App css -->
     <link href="css/app.css" rel="stylesheet">
@@ -30,21 +30,25 @@
       <hr>
 
 
+        <form method="post" action="{{ url('packingList') }}" enctype="multipart/form-data">
 
+          {{ csrf_field() }}
+          
           <div id='fill-step-1' class="form-group">
             <label for="boxes-in-shipment">How many boxes are in the shipment?</label>
-            <input type="number" class="form-control" id="boxes-in-shipment" placeholder="How many boxes are in the shipment?">
+            <input type="number" class="form-control" id="boxes-in-shipment" placeholder="How many boxes are in the shipment?" name="boxes_in_shipment">
           </div>
 
           <div id='fill-step-2'>
             <label for="amz-packing-list">Upload AMZ Packing list</label>
-            <input type="file" class="form-control" id="amz-packing-list" placeholder="Upload AMZ Packing list">
+            <input type="file" class="form-control" id="amz-packing-list" placeholder="Upload AMZ Packing list" name="packing_list">
           </div>
 
 
           <div class="button-next">
-            <button class="btn btn-block"> Continue</button>
+            <button class="btn btn-block" type="submit"> Continue</button>
           </div>
+      </form>
     </div>
     <footer class="footer">
 

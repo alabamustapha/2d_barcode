@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::post('packingList', 'AppController@packingList');
+
+Route::get('packListAsins', 'AppController@packListAsins');
