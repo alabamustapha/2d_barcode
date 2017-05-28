@@ -25,7 +25,7 @@
     <!-- Begin page content -->
     <div class="container">
       <div class="page-header">
-        <h1>2D Barcode Generator</h1>
+        <h1><a href="{{ url('/')}}" title="2D Barcode Generator Home">2D Barcode Generator</a></h1>
       </div>
 
       <p class="lead">Select ASINS (and quantity ) that should go into each box.</p>
